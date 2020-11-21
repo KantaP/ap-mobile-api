@@ -1,0 +1,14 @@
+version: '3.3'
+ 
+services:
+  node-express:
+    build: 
+      context: .
+      dockerfile: ./DockerFile
+    image: kantapong/ap-test-mobile-api
+    container_name: ap-test-mobile-api
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src
